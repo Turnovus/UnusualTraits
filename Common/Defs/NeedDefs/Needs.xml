@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<NeedDef>
+		<defName>Turn_Kill_Desire</defName>
+		<needClass>UnusualTraits.Need_Kill</needClass>
+		<label>bloodthirst</label>
+		<description>Bloodthirst is the need to extinguish human life. If opportunities to kill others do not present themselves, bloodthirsty pawns may make their own opportunities.</description>
+		<minIntelligence>Humanlike</minIntelligence>
+		<colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+		<listPriority>965</listPriority>
+		<freezeWhileSleeping>true</freezeWhileSleeping>
+		<fallPerDay>0.205</fallPerDay>
+		<onlyIfCausedByTrait>true</onlyIfCausedByTrait>
+		<major>true</major>
+		<showForCaravanMembers>true</showForCaravanMembers>
+		<scaleBar>true</scaleBar>
+	</NeedDef>
+	
+	<NeedDef>
+		<defName>Turn_GlobalPasteConsumption</defName>
+		<needClass>UnusualTraits.Need_GlobalPasteConsumption</needClass>
+		<label>paste consumption</label>
+		<!--<showOnNeedList>false</showOnNeedList>-->
+		<minIntelligence>Humanlike</minIntelligence>
+		<colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+		<listPriority>99</listPriority>
+		<freezeWhileSleeping>true</freezeWhileSleeping>
+		<onlyIfCausedByTrait>true</onlyIfCausedByTrait>
+	</NeedDef>
+	
+</Defs>

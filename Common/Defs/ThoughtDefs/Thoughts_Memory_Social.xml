@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<ThoughtDef>
+		<defName>BloodthirstyWords</defName>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>8</durationDays>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+			<li>Cannibal</li>
+		</nullifyingTraits>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+		<stackedEffectMultiplier>1.1</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>bloodthirsty rambling</label>
+				<baseOpinionOffset>-8</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>BloodthirstyWordsMood</thoughtToMake>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>BloodthirstyWordsMood</defName>
+		<durationDays>0.4</durationDays>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+			<li>Cannibal</li>
+		</nullifyingTraits>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>1.4</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>bloodthirsty ramblings</label>
+				<description>Somebody said something really messed up to me. I just can't get it out of my head!</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+</Defs>

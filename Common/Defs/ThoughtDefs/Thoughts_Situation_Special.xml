@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+    <defName>Turn_BloodthirstyDrone</defName>
+    <workerClass>ThoughtWorker_PsychicDrone</workerClass>
+    <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+    <validWhileDespawned>true</validWhileDespawned>
+	<requiredTraits>
+		<li>Turn_Bloodthirst</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>psychic soothe</label>
+        <description>This voice... I do not recognize it. It tries to silence the others.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li>
+        <label>low psychic drone</label>
+        <description>It's like a scratching at the back of my mind. Another voice, whispering. I can only make out a few words, and I like them.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+      <li>
+        <label>moderate psychic drone</label>
+        <description>I feel like someone is always just out of sight, speaking to me. The voice changes but the message doesn't. I'm supposed to hurt people. How exciting!</description>
+        <baseMoodEffect>22</baseMoodEffect>
+      </li>
+      <li>
+        <label>high psychic drone</label>
+        <description>The voice is incredibly loud. It's quite cathartic, in a way.</description>
+        <baseMoodEffect>30</baseMoodEffect>
+      </li>
+      <li>
+        <label>extreme psychic drone</label>
+        <description>My heart pounds and I'm sweating. All I can think of is hurting and suffering and all these enemies around me. It's like a dream.</description>
+        <baseMoodEffect>40</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

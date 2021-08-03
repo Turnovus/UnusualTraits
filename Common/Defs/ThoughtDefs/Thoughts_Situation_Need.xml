@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>Turn_BloodthirstUnsatisfied</defName>
+		<workerClass>UnusualTraits.ThoughtWorker_NeedKill</workerClass>
+		<requiredTraits>
+			<li>Turn_Bloodthirst</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>kill catharsis</label>
+				<description>Peace. But it is only a temporary reprieve.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+			<li>
+				<label>want to kill someone</label>
+				<description>The voices won't stay appeased for much longer.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+			<li>
+				<label>need to kill someone</label>
+				<description>The voices grow restless. They tell me to find my next target, or they'll do it for me.</description>
+				<baseMoodEffect>-30</baseMoodEffect>
+			</li>
+			<li>
+				<label>must kill someone</label>
+				<description>The voices are all shouting, arguing amongst each other. My dreams are filled with clashing swords and hot blood.</description>
+				<baseMoodEffect>-60</baseMoodEffect>
+			</li>
+			<li>
+				<label>MUST KILL MUST KILL MUST KILL</label>
+				<description>My heart beats like a drum, the voices shout like great trumpets. The time has come.</description>
+				<baseMoodEffect>-999</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>Turn_PasteConsumptionUnsatisfied</defName>
+		<workerClass>UnusualTraits.ThoughWorker_PasteConsumption</workerClass>
+		<requiredTraits>
+			<li>Turn_PasteFiend</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>adequate paste consumption</label>
+				<description>Enought people are eating nutrient paste, I suppose.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+			<li>
+				<label>insufficient paste consumption</label>
+				<description>There aren't quite enough people eating nutrient paste.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+			<li>
+				<label>meager paste consumption</label>
+				<description>So few people are eating nutrient paste. Don't they know it's the meal of the future?</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+			<li>
+				<label>pitiful paste consumption</label>
+				<description>Practically nobody is eating nutrient paste! All I can think about is all of those wasted nutrients.</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

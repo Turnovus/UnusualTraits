@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<InteractionDef>
+    <defName>Turn_BloodthirstTalk</defName>
+    <label>bloodthirsty ramblings</label>
+    <workerClass>UnusualTraits.InteractionWorker_Bloodthirsty</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Bloodthirsty</symbol>
+    <recipientThought>BloodthirstyWords</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+		<li>r_logentry(p=4)->[INITIATOR_nameDef] [queried] [RECIPIENT_nameDef] about [crazything].</li>
+        <li>r_logentry(p=2)->[INITIATOR_nameDef] [menaced] [RECIPIENT_nameDef].</li>
+		<li>r_logentry->[INITIATOR_nameDef] expressed vehement [hate_emotion] towards [RECIPIENT_nameDef]</li>
+		<li>r_logentry->[RECIPIENT_nameDef] was interrupted by [INITIATOR_nameDef]'s [talething] about [crazything].</li>
+        
+        <li>menaced->let loose a laugh, fell and terrible, at</li>
+		<li>menaced->stared blankly at</li>
+		<li>menaced->flashed a look of [crazyadjective] intent at</li>
+		<li>menaced->flashed a [crazyadjective] smile towards</li>
+		<li>menaced->flashed a look of [hate_emotion] towards</li>
+		
+		<li>queried(p=4)->asked</li>
+		<li>queried->expressed deeply-held beliefs to</li>
+		<li>queried->mumbled something to</li>
+		
+		<li>crazyadjective->cruel</li>
+		<li>crazyadjective->murderous</li>
+		<li>crazyadjective->brutal</li>
+		<li>crazyadjective->harsh</li>
+		<li>crazyadjective->uncaring</li>
+		<li>crazyadjective->bloodthirsty</li>
+		<li>crazyadjective->[AdjectiveAngsty]</li>
+		
+		<li>crazything->[crazyaction] [Enemy]s</li>
+		<li>crazything->endless rows of graves</li>
+		<li>crazything->foul demons</li>
+		<li>crazything->the eternity of death</li>
+		<li>crazything->the sounds that [Enemy]s make when killed</li>
+		<li>crazything->the warm feeling of fresh [Gore]</li>
+		<li>crazything->the cold hands</li>
+		<li>crazything->fire and brimstone</li>
+		<li>crazything->croaking in a puddle of demon snot</li>
+		<li>crazything->a good flesh wound</li>
+		<li>crazything->the pretty colors</li>
+		<li>crazything->the [AdjectiveAngsty] [Enemy]</li>
+		<li>crazything->that freaking red keycard</li>
+		
+		<li>crazyaction->flaying</li>
+		<li>crazyaction->mutilating</li>
+		<li>crazyaction->how best to kill</li>
+		
+		<li>hate_emotion->hatred</li>
+        <li>hate_emotion->anger</li>
+        <li>hate_emotion->fury</li>
+		<li>hate_emotion->rage</li>
+		
+		<li>talething->tales</li>
+		<li>talething->story</li>
+		<li>talething->lecture</li>
+		<li>talething->incoherent ramblings</li>
+		<li>talething->mad ravings</li>
+		
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+	
+</Defs>

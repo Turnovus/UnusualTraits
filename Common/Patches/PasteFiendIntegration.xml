@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/MemeDef[defName="Transhumanist"]/agreeableTraits</xpath>
+		<value>
+			<li>Turn_PasteFiend</li>
+		</value>
+	</Operation>
+	
+	<!--Remove negative thought for paste meals-->
+	<!--VERSION 1.3 ONLY!-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="AteNutrientPasteMeal"]/nullifyingTraits</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="AteNutrientPasteMeal"]</xpath>
+			<value>
+				<nullifyingTraits>
+					<li>Turn_PasteFiend</li>
+				</nullifyingTraits>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="AteNutrientPasteMeal"]/nullifyingTraits</xpath>
+			<value>
+				<li>Turn_PasteFiend</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!--Remove positive thoughts for good meals-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="AteLavishMeal"]/nullifyingTraits</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="AteLavishMeal"]</xpath>
+			<value>
+				<nullifyingTraits>
+					<li>Turn_PasteFiend</li>
+				</nullifyingTraits>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="AteLavishMeal"]/nullifyingTraits</xpath>
+			<value>
+				<li>Turn_PasteFiend</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="AteFineMeal"]/nullifyingTraits</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="AteFineMeal"]</xpath>
+			<value>
+				<nullifyingTraits>
+					<li>Turn_PasteFiend</li>
+				</nullifyingTraits>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="AteFineMeal"]/nullifyingTraits</xpath>
+			<value>
+				<li>Turn_PasteFiend</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!--Remove thoughts for eating undignified meals since paste is never dignified.-->
+	<!-- Fixed via Harmony patch
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ludeon.RimWorld.Royalty</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThoughtDef[defName="AteFoodInappropriateForTitle"]/nullifyingTraits</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName="AteFoodInappropriateForTitle"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>Turn_PasteFiend</li>
+					</nullifyingTraits>
+				</value>
+			</nomatch>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName="AteFoodInappropriateForTitle"]/nullifyingTraits</xpath>
+				<value>
+					<li>Turn_PasteFiend</li>
+				</value>
+			</match>
+		</match>
+	</Operation>
+	-->
+
+</Patch>

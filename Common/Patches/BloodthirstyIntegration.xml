@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!--
+	Make bloodthirsty pawns ignore the same memories that bloodlusty pawns ignore.
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThoughtDef/nullifyingTraits[li="Bloodlust"]</xpath>
+		<value>
+			<li>Turn_Bloodthirst</li>
+		</value>
+	</Operation>
+	
+	Make bloodthirsty pawns ignore the same precept restrictions as bloodlusty pawns
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits[li="Bloodlust"]</xpath>
+		<value>
+			<li>Turn_Bloodthirst</li>
+		</value>
+	</Operation>
+	-->
+	
+	<!--Bloodthirsty pawns ignore everything that bloodlusty pawns ignore.-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//nullifyingTraits[li="Bloodlust"]</xpath>
+		<value>
+			<li>Turn_Bloodthirst</li>
+		</value>
+	</Operation>
+	
+	<!--Bloodthirsty rambling is enabled during any mental states where insulting is enabled.-->
+	<Operation Class="PatchOperationAdd">
+		<!--<xpath>Defs/MentalStateDef[defName="InsultingSpree"]/blockInteractionInitiationExcept</xpath>-->
+		<xpath>//blockInteractionInitiationExcept[li="Insult"]</xpath>
+		<value>
+			<li>Turn_BloodthirstTalk</li>
+		</value>
+	</Operation>
+	
+	<!--Bloodthirsty pawns ignore the vanilla drone thoughts-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="PsychicDrone"]/nullifyingTraits</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="PsychicDrone"]</xpath>
+			<value>
+				<nullifyingTraits>
+					<li>Turn_Bloodthirst</li>
+				</nullifyingTraits>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="PsychicDrone"]/nullifyingTraits</xpath>
+			<value>
+				<li>Turn_Bloodthirst</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!--Bloodthirsty pawns ignore the vanilla drone thoughts-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="PsychicEmanatorSoothe"]/nullifyingTraits</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="PsychicEmanatorSoothe"]</xpath>
+			<value>
+				<nullifyingTraits>
+					<li>Turn_Bloodthirst</li>
+				</nullifyingTraits>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="PsychicEmanatorSoothe"]/nullifyingTraits</xpath>
+			<value>
+				<li>Turn_Bloodthirst</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="ArtifactMoodBoost"]/nullifyingTraits</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="ArtifactMoodBoost"]</xpath>
+			<value>
+				<nullifyingTraits>
+					<li>Turn_Bloodthirst</li>
+				</nullifyingTraits>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="ArtifactMoodBoost"]/nullifyingTraits</xpath>
+			<value>
+				<li>Turn_Bloodthirst</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

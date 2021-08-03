@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<TraitDef>
+		<defName>Turn_Bloodthirst</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>insatiable bloodthirst</label>
+				<description>{PAWN_nameDef} is controlled by the voices in {PAWN_possessive} head. The voices tell {PAWN_nameDef} to kill.</description>
+				<allowedMeditationFocusTypes><li>Morbid</li></allowedMeditationFocusTypes>
+				<theOnlyAllowedMentalBreaks>
+					<li>Berserk</li>
+					<li>Slaughterer</li>
+					<li>MurderousRage</li>
+					<li>SadisticRage</li>
+					<li>InsultingSpree</li>
+				</theOnlyAllowedMentalBreaks>
+				<randomMentalState>Berserk</randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(60, 200)</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+				<statFactors>
+					  <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.6</CertaintyLossFactor>
+					  <IncomingDamageFactor>0.90</IncomingDamageFactor>
+				</statFactors>
+				<statOffsets>
+					<ShootingAccuracyPawn>4.5</ShootingAccuracyPawn>
+					<AimingDelayFactor>-0.3</AimingDelayFactor>
+					<MeleeHitChance>3</MeleeHitChance>
+					<PainShockThreshold>0.1</PainShockThreshold>
+				</statOffsets>
+				<needs>
+					<li>Turn_Kill_Desire</li>
+				</needs>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<conflictingTraits>
+			<li>Bloodlust</li>
+			<li>Wimp</li>
+		</conflictingTraits>
+		<modExtensions>
+			<li Class="UnusualTraits.EnablesBloodthirstyRambling"/>
+		</modExtensions>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>Turn_PasteFiend</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>paste fiend</label>
+				<description>[PAWN_nameDef] has seen the future, and the future is nutrient paste. [PAWN_pronoun] will get upset if [PAWN_pronoun] or anyone else consumes any lesser food source.</description>
+				<!--<allowedMeditationFocusTypes><li>Turn_FocusNutrientPaste</li></allowedMeditationFocusTypes>-->
+				<needs>
+					<li>Turn_GlobalPasteConsumption</li>
+				</needs>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
+</Defs>
