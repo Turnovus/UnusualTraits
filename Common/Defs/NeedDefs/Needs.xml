@@ -21,6 +21,7 @@
 		<defName>Turn_GlobalPasteConsumption</defName>
 		<needClass>UnusualTraits.Need_GlobalPasteConsumption</needClass>
 		<label>paste consumption</label>
+		<description>DEBUG: How much nutrient paste is being eaten across the colony.</description>
 		<!--<showOnNeedList>false</showOnNeedList>-->
 		<minIntelligence>Humanlike</minIntelligence>
 		<colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>

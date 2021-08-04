@@ -17,7 +17,8 @@ namespace UnusualTraits
 
         public bool Disabled =>
             pawn.needs.TryGetNeed(
-                NeedDefOf.Turn_GlobalPasteConsumption) == null;
+                NeedDefOf.Turn_GlobalPasteConsumption) == null ||
+            pawn.Map.mapPawns.ColonistsSpawnedCount < 3;
 
         public MoodBuff MoodBuffForCurrentLevel
         {

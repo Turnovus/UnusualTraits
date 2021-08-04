@@ -45,7 +45,10 @@
 			<li>Wimp</li>
 		</conflictingTraits>
 		<modExtensions>
-			<li Class="UnusualTraits.EnablesBloodthirstyRambling"/>
+			<li Class="UnusualTraits.EnablesInitiatingInteraction">
+				<interactions><li>Turn_BloodthirstTalk</li></interactions>
+				<weight>5</weight>
+			</li>
 		</modExtensions>
 	</TraitDef>
 	

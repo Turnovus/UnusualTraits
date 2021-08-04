@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefModExtensions\EnablesBloodthirstyRambling.cs" />
+    <Compile Include="DefModExtensions\EnablesInitiatingInteraction.cs" />
     <Compile Include="DefOf\NeedDefOf.cs" />
     <Compile Include="DefOf\ThoughtDefOf.cs" />
     <Compile Include="DefOf\TraitDefOf.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="HarmonyPatches\PawnDiedOrDownedThoughtsUtility\AppendThoughts_ForHumanlike.cs" />
     <Compile Include="HarmonyPatches\Thing\Ingested.cs" />
     <Compile Include="InteractionWorkers\InteractionWorker_Bloodthirsty.cs" />
+    <Compile Include="InteractionWorkers\InteractionWorker_EnabledByInitiator.cs" />
     <Compile Include="Need\Need_GlobalPasteConsumption.cs" />
     <Compile Include="Need\Need_Kill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

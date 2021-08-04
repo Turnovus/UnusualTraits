@@ -4,7 +4,7 @@
 	<InteractionDef>
     <defName>Turn_BloodthirstTalk</defName>
     <label>bloodthirsty ramblings</label>
-    <workerClass>UnusualTraits.InteractionWorker_Bloodthirsty</workerClass>
+    <workerClass>UnusualTraits.InteractionWorker_EnabledByInitiator</workerClass>
     <symbol>Things/Mote/SpeechSymbols/Bloodthirsty</symbol>
     <recipientThought>BloodthirstyWords</recipientThought>
     <logRulesInitiator>
