@@ -10,7 +10,7 @@
 		<colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
 		<listPriority>965</listPriority>
 		<freezeWhileSleeping>true</freezeWhileSleeping>
-		<fallPerDay>0.205</fallPerDay>
+		<fallPerDay>0.1</fallPerDay>
 		<onlyIfCausedByTrait>true</onlyIfCausedByTrait>
 		<major>true</major>
 		<showForCaravanMembers>true</showForCaravanMembers>

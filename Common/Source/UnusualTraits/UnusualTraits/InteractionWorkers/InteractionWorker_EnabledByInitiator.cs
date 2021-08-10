@@ -22,7 +22,6 @@ namespace UnusualTraits
                     EnablesInitiatingInteraction e =
                         t.def.GetModExtension<EnablesInitiatingInteraction>();
                     if (e != null) {
-                        Log.Message("BEEP");
                         Log.Message(e.weight.ToString());
                         if (e.interactions.Contains(interaction) &&
                         e.weight > highestWeight)
