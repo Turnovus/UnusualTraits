@@ -48,9 +48,10 @@ namespace UnusualTraits
             }
         }
 
-        public void Notify_KillEvent(float value)
+        public void Notify_KillEvent(float value, bool showMote = true)
         {
-            MoteMaker.MakeThoughtBubble(pawn, THOUGHT_ICON_PATH);
+            if (showMote)
+                MoteMaker.MakeThoughtBubble(pawn, THOUGHT_ICON_PATH);
             CurLevel = Math.Min(CurLevel + value, MaxLevel);
         }
 

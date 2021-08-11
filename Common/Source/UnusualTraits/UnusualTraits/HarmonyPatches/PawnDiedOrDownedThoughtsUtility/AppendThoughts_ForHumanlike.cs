@@ -22,7 +22,7 @@ namespace UnusualTraits
         {
             if (
                 dinfo.HasValue &&
-                dinfo.Value.Def.ExternalViolenceFor((Thing)victim) &&
+                dinfo.Value.Def.ExternalViolenceFor(victim) &&
                 dinfo.Value.Instigator != null &&
                 dinfo.Value.Instigator is Pawn instigator &&
                 !instigator.Dead &&
@@ -33,7 +33,7 @@ namespace UnusualTraits
                     NeedDefOf.Turn_Kill_Desire);
                 if (bloodthirst != null)
                 {
-                    bloodthirst.Notify_KillEvent(0.25f);
+                    bloodthirst.Notify_KillEvent(0.45f);
                 }
             }
             if (thoughtsKind == PawnDiedOrDownedThoughtsKind.Died)
@@ -43,8 +43,7 @@ namespace UnusualTraits
                 {
                     if (
                         pawn != victim &&
-                        pawn.needs != null &&
-                        ThoughtUtility.Witnessed(pawn, victim)
+                        pawn.needs != null
                         )
                     {
                         Need_Kill bloodthirst =
@@ -52,7 +51,13 @@ namespace UnusualTraits
                                 NeedDefOf.Turn_Kill_Desire);
                         if (bloodthirst != null)
                         {
-                            bloodthirst.Notify_KillEvent(0.10f);
+                            if (ThoughtUtility.Witnessed(pawn, victim))
+                                bloodthirst.Notify_KillEvent(0.20f);
+                            else
+                            {
+                                if (victim.HostileTo(pawn))
+                                    bloodthirst.Notify_KillEvent(0.07f, false);
+                            }
                         }
                     }
                 }
