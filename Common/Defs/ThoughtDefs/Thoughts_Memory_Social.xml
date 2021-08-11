@@ -13,12 +13,12 @@
 			<li>Cannibal</li>
 		</nullifyingTraits>
 		<stackLimit>300</stackLimit>
-		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
-		<stackedEffectMultiplier>1.1</stackedEffectMultiplier>
+		<stackLimitForSameOtherPawn>50</stackLimitForSameOtherPawn>
+		<stackedEffectMultiplier>1.5</stackedEffectMultiplier>
 		<stages>
 			<li>
 				<label>bloodthirsty rambling</label>
-				<baseOpinionOffset>-8</baseOpinionOffset>
+				<baseOpinionOffset>-2</baseOpinionOffset>
 			</li>
 		</stages>
 		<thoughtToMake>BloodthirstyWordsMood</thoughtToMake>
@@ -32,13 +32,13 @@
 			<li>Bloodlust</li>
 			<li>Cannibal</li>
 		</nullifyingTraits>
-		<stackLimit>3</stackLimit>
-		<stackedEffectMultiplier>1.4</stackedEffectMultiplier>
+		<stackLimit>8</stackLimit>
+		<stackedEffectMultiplier>1.5</stackedEffectMultiplier>
 		<stages>
 			<li>
 				<label>bloodthirsty ramblings</label>
 				<description>Somebody said something really messed up to me. I just can't get it out of my head!</description>
-				<baseMoodEffect>-4</baseMoodEffect>
+				<baseMoodEffect>-1</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>

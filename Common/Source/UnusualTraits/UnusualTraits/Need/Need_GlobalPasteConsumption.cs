@@ -53,7 +53,7 @@ namespace UnusualTraits
         public void NotifyPasteConsumed(Pawn p)
         {
             if (p != pawn)
-                CurLevel += 0.5f / pawn.Map.mapPawns.ColonistsSpawnedCount;
+                CurLevel += 0.42f / pawn.Map.mapPawns.ColonistsSpawnedCount;
         }
 
         public enum MoodBuff
